@@ -21,6 +21,10 @@
         position: fixed !important;
         width: 100%;
     }
+    
+    .ui.inverted.menu {
+        border-top: 2px solid #F27E31;
+    }
     </style>
 </head>
 
@@ -28,17 +32,25 @@
     <div class="ui fixed inverted menu">
         <div class="ui container">
             <a href="#" class="header item">
-        	Cloud Radio 
-      		</a>
+            Cloud Radio 
+            </a>
         </div>
     </div>
     <div class="ui main text container">
         <center><img src="minilogo.png"></center>
         <br> Let's make this right. It's my pleasure to meet you. We are the Cloud Radio developers team and i'll be your guide through this documentation. First of all i highly recommend that you check our models. A model is also what you know as a table, or simply the format we save our data. It's important to note about our models that if a field has no information it won't be available when you select that record. By doing this we save space in our hard-disks and time in our processors. When you see a field in a model with type: Schema.Types.ObjectId this means that field is an id from another model. You'll always send me as a String, and you have the option to receive it as an object containing all the data related to the specific id.
         <p>
-            <center><strong>Important the access to Cloud Radio only is required by comercial agreements if you wanna be a partner <a href="">contact us</a></strong></center>
+            <div class="ui icon message">
+                <i class="privacy icon"></i>
+                <div class="content">
+                    <div class="header">
+                        Want acces to Cloud Radio api?
+                    </div>
+                    <p>only by comercial agreements if you wanna be a partner <a href="">contact us</a></p>
+                </div>
+            </div>
         </p>
-        <hr>
+        
         <div class="row">
             <p>
                 <h3>Application</h3></p>
