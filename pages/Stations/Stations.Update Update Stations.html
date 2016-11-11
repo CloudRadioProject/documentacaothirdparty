@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- Site Properties -->
+    <title>Cloud Radio - API</title>
+    <link rel="stylesheet" type="text/css" href="../../source/semantic.min.css">
+    <style type="text/css">
+    .main.container {
+        margin-top: 70px;
+        margin-bottom: 100px;
+    }
+    
+    .footer {
+        position: absolute !important;
+        bottom: 0px !important;
+        position: fixed !important;
+        width: 100%;
+    }
+    
+    .ui.inverted.menu {
+        border-top: 2px solid #F27E31;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="ui fixed inverted menu">
+        <div class="ui container">
+            <a href="../../index.html" class="header item">
+            Cloud Radio 
+            </a>
+        </div>
+    </div>
+    <div class="ui main text container">
+        <p>
+            <h2>Update - Update Station (User Token Required)</h2></p>
+        <p><strong>URL : [PUT] /stations/{id}</strong></p>
+        <p>
+            The id of the station you want to update must be sent in the url as a query parameter
+            <br> Example: If you wanna update the station 1 you should use
+        </p>
+        <p>http://www.cloudradio.net/stations/1</p>
+        <p>
+            <h2>Parameters</h2></p>
+        <p>
+            You must send a JSON Object containing the elements below
+        </p>
+        <p>
+            <div class="ui bulleted list">
+                <div class="item">name: String,</div>
+                <div class="item">description: String,</div>
+                <div class="item">categories : ObjectId,</div>
+                <div class="item">image : ObjectId, (optional)</div>
+                <div class="item">url: String, (optional)</div>
+                <div class="item">administrators: String, optional</div>
+            </div>
+        </p>
+        <p>
+            <h2>Understanding the fields:</h2></p>
+        <p>
+            <div class="ui bulleted list">
+                <div class="item">name: The main name/title of the station</div>
+                <div class="item">description: describe your station as best as you can</div>
+                <div class="item">categories: An array containing the ids of the categories</div>
+                <div class="item">image: the id of the image previously updated</div>
+                <div class="item">url: A unique URL for users to access your station</div>
+                <div class="item">administrators: an array containing the id's of the administrators</div>
+            </div>
+        </p>
+        <p>
+            <h2>Response</h2>
+            <p>
+                The response will contain two fields:
+                <div class="ui bulleted list">
+                    <div class="item">status: Containing 'success' or 'error</div>
+                    <div class="item">data: Containing the error message or the data created/updated/removed even the flag true</div>
+                </div>
+            </p>
+        </p>
+    </div>
+    <div class="ui inverted vertical footer segment">
+        <div class="ui center aligned container">
+            <div class="ui horizontal inverted small divided link list">
+                <a class="item" href="#">Contact Us</a>
+                <a class="item" href="#">Terms and Conditions</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
