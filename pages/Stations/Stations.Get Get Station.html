@@ -14,14 +14,14 @@
         margin-top: 70px;
         margin-bottom: 100px;
     }
-    
+
     .footer {
         position: absolute !important;
         bottom: 0px !important;
         position: fixed !important;
         width: 100%;
     }
-    
+
     .ui.inverted.menu {
         border-top: 2px solid #F27E31;
     }
@@ -32,22 +32,22 @@
     <div class="ui fixed inverted menu">
         <div class="ui container">
             <a href="../../index.html" class="header item">
-            Cloud Radio 
+            Cloud Radio
             </a>
         </div>
     </div>
     <div class="ui main text container">
         <p>
-            <h2>Select - Get Station (User Token Required)</h2></p>
+            <h2>Select - Get Station <a href=/pages/Users/Users.GetToken Get User Token.html>(User Token Required)</h2></p>
         <p>
-            <strong>URL : [GET] /stations</strong>
+            <strong>URL : [GET] /podcasts</strong>
         </p>
         <p>
             <h2>Parameters</h2></p>
         <p>
             You must send the parameters in the url.
         </p>
-        <p>Example: http://www.cloudradio.net/stations?name=jovem+nerd http://www.cloudradio.net/stations?description=dicas+de+poker</p>
+        <p>Example: http://api.cloudradio.com.br:8080/stations?name=scicast http://api.cloudradio.com.br:8080/podcasts?description=poker</p>
         <p>
             <div class="ui bulleted list">
                 <div class="item">name: String, (optional)</div>
@@ -56,8 +56,6 @@
                 <div class="item">image : ObjectId, (optional)</div>
                 <div class="item">url: String, (optional)</div>
                 <div class="item">users: ObjectId, (optional)</div>
-                <div class="item">podcasts: ObjectId, (optional)</div>
-                <div class="item">administrators: ObjectId, (optional)</div>
                 <div class="item">populate: boolean, (optional)</div>
                 <div class="item">limit: Integer, (required)</div>
             </div>
@@ -71,9 +69,7 @@
                 <div class="item">image: the id of the image you wanna search</div>
                 <div class="item">url: the unique url for the station</div>
                 <div class="item">users: The station owner id</div>
-                <div class="item">podcasts: The id of a podcast that you wanna find out to which station it belongs</div>
-                <div class="item">administrators: The user id's that can edit that station</div>
-                <div class="item">populate: Send true if you want to have all the data from podcasts and users too</div>
+                <div class="item">populate: Send true if you want it's ids to come populated</div>
                 <div class="item">limit: The maximum return items you want. if you do not inform this value, the default will be considered as 20</div>
             </div>
         </p>
@@ -91,8 +87,8 @@
     <div class="ui inverted vertical footer segment">
         <div class="ui center aligned container">
             <div class="ui horizontal inverted small divided link list">
-                <a class="item" href="#">Contact Us</a>
-                <a class="item" href="#">Terms and Conditions</a>
+                <a class="item" href="https://docs.google.com/forms/d/e/1FAIpQLSfjjBChCMpi3jq4xe7OB-X7YCsNaLej3GWCZzQoJl-te4XOJg/viewform?c=0&w=1">Found a bug?</a>
+                <a class="item" href="http://http://www.cloudradio.com.br/#/termosdeuso">Terms and Conditions</a>
             </div>
         </div>
     </div>
