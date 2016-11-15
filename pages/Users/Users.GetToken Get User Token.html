@@ -14,14 +14,14 @@
         margin-top: 70px;
         margin-bottom: 100px;
     }
-    
+
     .footer {
         position: absolute !important;
         bottom: 0px !important;
         position: fixed !important;
         width: 100%;
     }
-    
+
     .ui.inverted.menu {
         border-top: 2px solid #F27E31;
     }
@@ -32,21 +32,21 @@
     <div class="ui fixed inverted menu">
         <div class="ui container">
             <a href="../../index.html" class="header item">
-            Cloud Radio 
+            Cloud Radio
             </a>
         </div>
     </div>
     <div class="ui main text container">
         <p>
-            <h2>Auth - Get Token (Application Token Required)</h2></p>
+            <h2>Auth - Get Token <a href="../pages/Application/Application.GetToken.html">(Application Token Required)</a></h2></p>
         <p>This route is used to get a logged user token, some routes can only be used with this token.
         </p>
-        <p><strong>URL : [POST] /users/login</strong></p>
+        <p><strong>URL : [POST] http://api.cloudradio.com.br:8080/users/login</strong></p>
         <p>
             <h2>Parameters</h2></p>
         <p>You must send the parameters in the url.</p>
         <p>
-            <pre>Example: http://www.cloudradio.net/users/login?password=senhasegura&username=diego&email=example@hotmail.com&token=eyJ0eXAiOiJKV<br>1QiLCJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkIjoiTW9uIEp1bCAxOCAyMDE2IDE1OjU4OjQyIEdNV<br>C0wMzAwIChIb3JhIG9maWNpYWwgZG8gQnJhc2lsKSIsIm5hbWUiOiJ0ZXN0ZXNEaWVnbyIsI<br>nVzZXIiOiJkaWVnbyIsImFwcGlkIjoiNTc4Y2M5Njg2ZGJiYThlNDEzYTc0YzAzIiwiYXBwc2VjcmV0I<br>joiMnhZWERodGhRWVJnZFhPN1U0MWtRSEx4NTRvaFZBU1BoSHJIUC9EbHg4T3E5OUNRR01<br>LV25WL1A4MGpaVHJtMWIvQTYyQXFOeEFRVHg0clgvei9hRGhsWVZKR0d5ZDlmMDM2YTh3<br>M0w3R1VyRks3eWdCdXFRL3VRMzYxN1NrdE8iLCJwYXNzd29yZCI6ImMyWkltRnZFVzgrZX<br>VnQ1JVMU5aLzFBeWhDWnE1VFluaXVlQXRtQ3NFOTVYd2dLQWEvLzFFNnZCaGpiSzA3b3ZT<br>YnVSelp3bkFJQkNuWVJmVUFWQkVJZjFFRW9FREVxNnlJbWwwRTJrTG1vPSIsImlhdCI6MTQ<br>2ODg2ODMyMn0.WAxr3Zz9AbYtrMbEUStPows1XF2sDnKnsySEtwmxCnA</pre>
+            <pre>Example: http://api.cloudradio.com.br:8080/users/login?password=supersecurity&username=test&token=xrA854b5QuF93D43bNndzhLP8VQUaGpGujeqUbF8zFxHrzdMNrwsgcFFJ3HMCgSXRaaCyQdJTKbE4Fgm4VcWRvxK9qaP8v78vNNAQ3GwGS2gQ8JWuL43Rkrh
         </p>
         <p>
             <div class="ui bulleted list">
@@ -75,7 +75,7 @@
                 The response will contain two fields:
                 <div class="ui bulleted list">
                     <div class="item">status: Containing 'success' or 'error</div>
-                    <div class="item">data: Containing the error message or the data created/updated/removed even the flag true</div>
+                    <div class="item">data: Containing the error message or the user token</div>
                 </div>
             </p>
         </p>

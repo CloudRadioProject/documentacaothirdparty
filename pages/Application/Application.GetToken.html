@@ -10,21 +10,21 @@
     <title>Cloud Radio - API</title>
     <link rel="stylesheet" type="text/css" href="../../source/semantic.min.css">
     <style type="text/css">
-    .main.container {
-        margin-top: 70px;
-        margin-bottom: 100px;
-    }
+        .main.container {
+            margin-top: 70px;
+            margin-bottom: 100px;
+        }
 
-    .footer {
-        position: absolute !important;
-        bottom: 0px !important;
-        position: fixed !important;
-        width: 100%;
-    }
+        .footer {
+            position: absolute !important;
+            bottom: 0px !important;
+            position: fixed !important;
+            width: 100%;
+        }
 
-    .ui.inverted.menu {
-        border-top: 2px solid #F27E31;
-    }
+        .ui.inverted.menu {
+            border-top: 2px solid #F27E31;
+        }
     </style>
 </head>
 
@@ -41,7 +41,7 @@
         <p>
             <h3>Auth - Get Token</h3></p>
         <p>
-            <strong>URL : [POST] /get_application_token/{user}_</strong>
+            <strong>URL : [POST] api.cloudradio.com.br:8080/get_application_token_/{user}</strong>
         </p>
         <p>
             <p>
@@ -53,8 +53,12 @@
                 <div class="item">appSecret: String, (required)</div>
             </div>
             <h4> Understanding the fields: </h4>
-            password: the application password
-            <br> appSecret: You unique key to access our API, you can ask for one sending an email to dmachado@cloudradio.net
+            <p>
+                <div class="ui bulleted list">
+                    <div class="item">password: the application password</div>
+                    <div class="item">appSecret: You unique key to access our API, you can ask for one sending an email to dmachado@cloudradio.net</div>
+                </div>
+            </p>
         </p>
         <p>
             <h2>Response</h2>
