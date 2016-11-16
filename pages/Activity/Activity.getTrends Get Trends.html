@@ -14,14 +14,14 @@
         margin-top: 70px;
         margin-bottom: 100px;
     }
-    
+
     .footer {
         position: absolute !important;
         bottom: 0px !important;
         position: fixed !important;
         width: 100%;
     }
-    
+
     .ui.inverted.menu {
         border-top: 2px solid #F27E31;
     }
@@ -32,13 +32,13 @@
     <div class="ui fixed inverted menu">
         <div class="ui container">
             <a href="../../index.html" class="header item">
-            Cloud Radio 
+            Cloud Radio
             </a>
         </div>
     </div>
     <div class="ui main text container">
         <p>
-            <h2>Select- Get Trends (User Token Required)</h2></p>
+            <h2>Select- Get Trends <a href="pages/Users/Users.GetToken Get User Token.html">(User Token Required)</a></h2></p>
         <p>
             <h3>What can i do with this route?</h3>
         </p>
@@ -51,21 +51,19 @@
         <p><strong>{action}</strong></p>
         <p>
             <div class="ui bulleted list">
-                <div class="item">1 - like</div>
-                <div class="item">2 - share</div>
-                <div class="item">3 - dislike</div>
-                <div class="item">4 - follow</div>
-                <div class="item">5 - play</div>
+                <div class="item">like</div>
+                <div class="item">follow</div>
+                <div class="item">play</div>
+                <div class="item">general</div>
             </div>
         </p>
         <p>We also need to have object type we wanna get:</p>
         <p><strong>{objectType}</strong></p>
         <p>
             <div class="ui bulleted list">
-                <div class="item">1 - user</div>
-                <div class="item">2 - station</div>
-                <div class="item">3 - podcast</div>
-                <div class="item">4 - episode</div>
+                <div class="item">user</div>
+                <div class="item">podcast</div>
+                <div class="item">episode</div>
             </div>
         </p>
         <p>
@@ -77,13 +75,13 @@
             [skip] : The amount of pages you wanna skip [amount] : the number of results you wanna get in this response So, if you send limit=30 you will get the first 30 results for your search If you send limit = 2,30 you will get the next 30 results (from 31 to 60) If you send limit = 3,30 you will get the next 30 results (from 61 to 90) and so on
         </p>
         <p>Let's take a look on how this route will look like:</p>
-        <p><strong>[GET] /trends/{action}/{objectType}</strong></p>
+        <p><strong>[GET] api.cloudradio.com.br:8080/trends/{action}/{objectType}</strong></p>
         <p>
             Example:
         </p>
         <p>
             If you wanna get a list with the 10 most popular episodes in terms of listening you can use:
-            <br>http://www.cloudradio.net.br/play/episode?limit=1,10
+            <br>http://api.cloudradio.com.br:8080/trends/play/episode?limit=0,10
         </p>
         <p>
             <h2>UPDATE</h2></p>
@@ -92,7 +90,7 @@
         </p>
         <p>Category: The category id you want to filter Keyword: An specific Keyword that the object shares (WARNING, that's the keywords, not title, not description)</p>
         <p>Example:</p>
-        <p>http://www.cloudradio.net.br/play/episode?limit=1,10&category=723jds78jbksd&keyword=esquilo</p>
+        <p>http://api.cloudradio.com.br:8080/play/episode?limit=0,10&category=723jds78jbksd&keyword=esquilo</p>
         <p>
             <h2>Response</h2>
             <p>
@@ -107,8 +105,8 @@
     <div class="ui inverted vertical footer segment">
         <div class="ui center aligned container">
             <div class="ui horizontal inverted small divided link list">
-                <a class="item" href="#">Contact Us</a>
-                <a class="item" href="#">Terms and Conditions</a>
+                <a class="item" href="https://docs.google.com/forms/d/e/1FAIpQLSfjjBChCMpi3jq4xe7OB-X7YCsNaLej3GWCZzQoJl-te4XOJg/viewform?c=0&w=1">Found a bug?</a>
+                <a class="item" href="http://http://www.cloudradio.com.br/#/termosdeuso">Terms and Conditions</a>
             </div>
         </div>
     </div>
