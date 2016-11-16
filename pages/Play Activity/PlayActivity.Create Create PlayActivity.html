@@ -14,14 +14,14 @@
         margin-top: 70px;
         margin-bottom: 100px;
     }
-    
+
     .footer {
         position: absolute !important;
         bottom: 0px !important;
         position: fixed !important;
         width: 100%;
     }
-    
+
     .ui.inverted.menu {
         border-top: 2px solid #F27E31;
     }
@@ -32,48 +32,47 @@
     <div class="ui fixed inverted menu">
         <div class="ui container">
             <a href="../../index.html" class="header item">
-            Cloud Radio 
+            Cloud Radio
             </a>
         </div>
     </div>
     <div class="ui main text container">
         <p>
-            <h2>Insert - Create PlayActivity</h2></p>
+            <h2>Insert - Create PlayActivity <a href="pages/Users/Users.GetToken Get User Token.html">(User Token Required)</a></h2></p>
         <p>
             <h3>What's a Play Activity?</h3></p>
-        <p>Every time an user listen to an episode, we need to get track of these activities? Why? CloudRadio is an evil corporation whose main objective is world domination? No! Unfortunately our evil doctors got fired last week, all we are trying to do is keep track of your habits in order to give you some bonus for listening to our podcasts and we only can do it by knowing if an user really listened the episode.</p>
+        <p>Every time an user listen to an episode, we need to get track of these activities?
+            <br> Why?
+            <br> CloudRadio is an evil corporation whose main objective is world domination?
+            <br> No! Unfortunately our evil doctors got fired last week, all we are trying to do is keep track of your habits in order to give you some bonus for listening to our podcasts and we only can do it by knowing if an user really listened the episode.
+        </p>
         <p><strong>[POST] /play</strong></p>
         <p>
             <h2>Parameters</h2></p>
         <p>
-            You must send a JSON Object containing the elements below
+            You must send a JSON Object containing the elements below.
+            <br> <h3> WARNING </h3>
+            <br> The first object containing the statistics for an specific episode must contain start and end times equal 0.
+            <br> There are also other fields that must be sent only in the first statistic.
         </p>
         <p>
             <div class="ui bulleted list">
-                <div class="item">userId: ObjectId,</div>
                 <div class="item">episodeId: ObjectId,</div>
-                <div class="item">integratorId: ObjectId, (optional)</div>
+                <div class="item">action: String,</div>
+                <div class="item">connectionType: String, (SEND ONLY IN FIRST)</div>
+                <div class="item">device: ObjectId, (SEND ONLY IN FIRST)</div>
+                <div class="item">fileTransfer: ObjectId, (SEND ONLY IN FIRST)</div>
                 <div class="item">beginTime: Number,</div>
                 <div class="item">endTime: Number,</div>
                 <div class="item">listenDateTime: DateTime,</div>
                 <div class="item">location: String, (optional)</div>
-                <div class="item">action: String, (optional)</div>
-                <div class="item">connectionType: String, (optional)</div>
-                <div class="item">device: ObjectId, (optional)</div>
-                <div class="item">fileTransfer: ObjectId, (optional)</div>
             </div>
         </p>
         <p>
             <h2>Understanding the fields:</h2></p>
         <p>
             <div class="ui bulleted list">
-                <div class="item">userId: The id of the user who listened</div>
                 <div class="item">episodeId: the id of the episode listened</div>
-                <div class="item">beginTime: When you started listening to it</div>
-                <div class="item">endTime: When you ended/stopped listening to it</div>
-                <div class="item">listenDateTime: when it was listened</div>
-                <div class="item">integratorId: If the user listened it using a third part application inform the id in this field so we can congratulate the correct folks</div>
-                <div class="item">location: The geolocation of the person when it finished listening to it</div>
                 <div class="item">action: inform here if the marking was completely listened or not. The values allowed in this field are:
                     <div class="ui bulleted list">
                         <div class="item">1 - listened</div>
@@ -81,7 +80,6 @@
                         <div class="item">3 - skkiped</div>
                         <div class="item">4 - clicked</div>
                     </div>
-                </div>
                 <div class="item">connectionType: what kind of internet was being used? The values allowed in this field are:
                     <div class="ui bulleted list">
                         <div class="item">1 - 3g</div>
@@ -99,6 +97,11 @@
                         <div class="item">2 - downloaded</div>
                     </div>
                 </div>
+                <div class="item">beginTime: When you started listening to it</div>
+                <div class="item">endTime: When you ended/stopped listening to it</div>
+                <div class="item">listenDateTime: when it was listened</div>
+                <div class="item">location: The geolocation of the person when it finished listening to it</div>
+                </div>
             </div>
         </p>
         <p>
@@ -115,8 +118,8 @@
     <div class="ui inverted vertical footer segment">
         <div class="ui center aligned container">
             <div class="ui horizontal inverted small divided link list">
-                <a class="item" href="#">Contact Us</a>
-                <a class="item" href="#">Terms and Conditions</a>
+                <a class="item" href="https://docs.google.com/forms/d/e/1FAIpQLSfjjBChCMpi3jq4xe7OB-X7YCsNaLej3GWCZzQoJl-te4XOJg/viewform?c=0&w=1">Found a bug?</a>
+                <a class="item" href="http://http://www.cloudradio.com.br/#/termosdeuso">Terms and Conditions</a>
             </div>
         </div>
     </div>
