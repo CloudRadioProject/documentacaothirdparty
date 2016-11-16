@@ -40,26 +40,22 @@
         <p>
             <h2>Select - Get Episode <a href="pages/Users/Users.GetToken Get User Token.html">(User Token Required)</a></h2></p>
         <p>
-            <strong>URL : [GET] api.cloudradio.com.br:8080/episodes</strong>
+            <strong>URL : [GET] homolog.front.cloudradio.com.br:8080/episodes</strong>
         </p>
         <p>
             <h2>Parameters</h2>
         </p>
         <p>
             You must send the parameters in the url.
-            <br> Example: http://api.cloudradio.com.br:8080/episodes?name=cobra
-            <br> http://api.cloudradio.com.br:8080/episodes?keywords=ovo
+            <br> Example: http://homolog.front.cloudradio.com.br:8080/episodes?name=cobra
+            <br> http://homolog.front.cloudradio.com.br:8080/episodes?keywords=ovo
         </p>
         <p>
             <div class="ui bulleted list">
                 <div class="item">name: String, (optional)</div>
                 <div class="item">description: String, (optional)</div>
                 <div class="item">keywords: String, (optional)</div>
-                <div class="item">duration: String, (optional)</div>
-                <div class="item">number: String, (optional)</div>
-                <div class="item">disqusThread: String, (optional)</div>
                 <div class="item">podcasts: *String, (optional)</div>
-                <div class="item">markings: ObjectId, (optional)</div>
                 <div class="item">categories: ObjectId, (optional)</div>
                 <div class="item">podcasters: ObjectId, (optional)</div>
                 <div class="item">limit: ([skip]Integer, [amount]Integer), (required)</div>
@@ -72,18 +68,13 @@
                 <div class="item">name: The main name/title of the station</div>
                 <div class="item">description: describe your station as best as you can</div>
                 <div class="item">keywords: An array containing the keywords for the episode</div>
-                <div class="item">duration: The duration of the episode in seconds</div>
-                <div class="item">number: a unique identifier for yur episode as '1', '2'....'N'</div>
-                <div class="item">disqusThread: Thread linked to your post in wordpress (used to sync disqus comments for each episode)</div>
                 <div class="item">podcast: The station id that the episode belongs to</div>
-                <div class="item">fileSize: sound file full size in Kbytes</div>
-                <div class="item">markings: An array containing the ids of markings for this episode</div>
                 <div class="item">categories: An array containing the ids of the categories</div>
                 <div class="item">podcasters: An array containing the ids of all the users involved in the episode</div>
                 <div class="item">limit: this parameter is composed of two fields separated by a "," :
                     <div class="ui bulleted list">
                         <div class="item">[skip] : The amount of pages you wanna skip</div>
-                        <div class="item">[amount] : the number of results you wanna get in this response So, if you send limit=30 you will get the first 30 results for your search If you send limit = 2,30 you will get the next 30 results (from 31 to 60) If you send limit = 3,30 you will get the next 30 results (from 61 to 90) and so on</div>
+                        <div class="item">[amount] : the number of results you wanna get in this response So, if you send limit=0,30 you will get the first 30 results for your search If you send limit = 1,30 you will get the next 30 results (from 31 to 60) If you send limit = 2,30 you will get the next 30 results (from 61 to 90) and so on</div>
                     </div>
                 </div>
             </div>

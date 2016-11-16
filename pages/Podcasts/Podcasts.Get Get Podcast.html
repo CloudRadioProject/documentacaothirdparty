@@ -14,14 +14,14 @@
         margin-top: 70px;
         margin-bottom: 100px;
     }
-    
+
     .footer {
         position: absolute !important;
         bottom: 0px !important;
         position: fixed !important;
         width: 100%;
     }
-    
+
     .ui.inverted.menu {
         border-top: 2px solid #F27E31;
     }
@@ -32,13 +32,13 @@
     <div class="ui fixed inverted menu">
         <div class="ui container">
             <a href="../../index.html" class="header item">
-            Cloud Radio 
+            Cloud Radio
             </a>
         </div>
     </div>
     <div class="ui main text container">
         <p>
-            <h2><strong>Select - Get Podcast (User Token Required)</strong></h2></p>
+            <h2><strong>Select - Get Podcast <a href="pages/Users/Users.GetToken Get User Token.html">(User Token Required)</a></strong></h2></p>
         <p>
             <strong>URL : [GET] /podcasts</strong>
         </p>
@@ -54,19 +54,9 @@
                 <div class="item">name: String, (optional)</div>
                 <div class="item">description: String, (optional)</div>
                 <div class="item">keywords: Array of String, (optional)</div>
-                <div class="item">episodes: ObjectId, (optional)</div>
                 <div class="item">categories: ObjectId, (optional)</div>
-                <div class="item">image: ObjectId, (optional)</div>
-                <div class="item">feedUrl: String, (optional)</div>
                 <div class="item">url: String, (optional)</div>
                 <div class="item">language: String, (optional)</div>
-                <div class="item">disqusToken: String, (optional)</div>
-                <div class="item">forumName: String, (optional)</div>
-                <div class="item">administrators: ObjectId, (optional)</div>
-                <div class="item">email: String, (optional)</div>
-                <div class="item">phone: String, (optional)</div>
-                <div class="item">facebook: String, (optional)</div>
-                <div class="item">twitter: String, (optional)</div>
                 <div class="item">limit: Integer, (required)</div>
             </div>
         </p>
@@ -78,18 +68,14 @@
                 <div class="item">description: describe your station as best as you can</div>
                 <div class="item">keywords: An array containing the keywords for the podcast</div>
                 <div class="item">categories: An array containing the ids of the categories</div>
-                <div class="item">image: the id of the image previously updated</div>
-                <div class="item">feedUrl: the old feed url to import the previous podcast data</div>
                 <div class="item">url: A unique URL for users to access your station</div>
-                <div class="item">language: The language used in the podcast ex: EN, PT, ES, DE</div>
-                <div class="item">disqusToken: The token used to access disqus data after validation, more info how to get the token at https://disqus.com/api/docs/auth/</div>
-                <div class="item">forumName: The disqus forum name. Usually the podcast name associated in DISQUS</div>
-                <div class="item">administrators: The user id of the administrator you wanna search</div>
-                <div class="item">email: The podcast's main email</div>
-                <div class="item">phone: `the podcast's main phone</div>
-                <div class="item">facebook: the podcast's facebook page</div>
-                <div class="item">twitter: the podcast's twitter account</div>
-                <div class="item">limit: The maximum return items you want. if you do not inform this value, the default will be considered as 20</div>
+                <div class="item">language: The language used in the podcast ex: EN-US, PT-BR, ES-ES</div>
+                <div class="item">limit: this parameter is composed of two fields separated by a "," :
+                    <div class="ui bulleted list">
+                        <div class="item">[skip] : The amount of pages you wanna skip</div>
+                        <div class="item">[amount] : the number of results you wanna get in this response So, if you send limit=0,30 you will get the first 30 results for your search If you send limit = 1,30 you will get the next 30 results (from 31 to 60) If you send limit = 2,30 you will get the next 30 results (from 61 to 90) and so on</div>
+                    </div>
+                </div>
             </div>
         </p>
         <p>
@@ -106,8 +92,8 @@
     <div class="ui inverted vertical footer segment">
         <div class="ui center aligned container">
             <div class="ui horizontal inverted small divided link list">
-                <a class="item" href="#">Contact Us</a>
-                <a class="item" href="#">Terms and Conditions</a>
+                <a class="item" href="https://docs.google.com/forms/d/e/1FAIpQLSfjjBChCMpi3jq4xe7OB-X7YCsNaLej3GWCZzQoJl-te4XOJg/viewform?c=0&w=1">Found a bug?</a>
+                <a class="item" href="http://http://www.cloudradio.com.br/#/termosdeuso">Terms and Conditions</a>
             </div>
         </div>
     </div>

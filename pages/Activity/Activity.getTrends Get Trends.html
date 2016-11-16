@@ -72,16 +72,16 @@
         <p><strong>limit: ([skip] Integer, [amount] Integer), (required)</strong></p>
         <p>this parameter is composed of two fields separated by a "," :</p>
         <p>
-            [skip] : The amount of pages you wanna skip [amount] : the number of results you wanna get in this response So, if you send limit=30 you will get the first 30 results for your search If you send limit = 2,30 you will get the next 30 results (from 31 to 60) If you send limit = 3,30 you will get the next 30 results (from 61 to 90) and so on
+            [skip] : The amount of pages you wanna skip [amount] : the number of results you wanna get in this response So, if you send limit=0,30 you will get the first 30 results for your search If you send limit = 1,30 you will get the next 30 results (from 31 to 60) If you send limit = 2,30 you will get the next 30 results (from 61 to 90) and so on
         </p>
         <p>Let's take a look on how this route will look like:</p>
-        <p><strong>[GET] api.cloudradio.com.br:8080/trends/{action}/{objectType}</strong></p>
+        <p><strong>[GET] homolog.front.cloudradio.com.br:8080/trends/{action}/{objectType}</strong></p>
         <p>
             Example:
         </p>
         <p>
             If you wanna get a list with the 10 most popular episodes in terms of listening you can use:
-            <br>http://api.cloudradio.com.br:8080/trends/play/episode?limit=0,10
+            <br>http://homolog.front.cloudradio.com.br:8080/trends/play/episode?limit=0,10
         </p>
         <p>
             <h2>UPDATE</h2></p>
@@ -90,7 +90,7 @@
         </p>
         <p>Category: The category id you want to filter Keyword: An specific Keyword that the object shares (WARNING, that's the keywords, not title, not description)</p>
         <p>Example:</p>
-        <p>http://api.cloudradio.com.br:8080/play/episode?limit=0,10&category=723jds78jbksd&keyword=esquilo</p>
+        <p>http://homolog.front.cloudradio.com.br:8080/play/episode?limit=0,10&category=723jds78jbksd&keyword=esquilo</p>
         <p>
             <h2>Response</h2>
             <p>
